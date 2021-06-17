@@ -1,0 +1,192 @@
+.messages{
+     position: absolute;
+     width: 80%;
+     height: 95%;
+     left: 10%;
+     background-color: rgb(21, 54, 65);
+     border-radius: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: white;
+     z-index: 3;
+     animation-name: slideMessagesDown;
+     animation-duration: .3s;
+     animation-timing-function: ease-in-out;
+ }
+    .hideMessages{
+        position: absolute;
+        width: 80%;
+        height: 5%;
+        left: 10%;
+        background-color: rgb(21, 54, 65);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        z-index: 3;
+        animation-name: slideMessagesUp;
+        animation-duration: .3s;
+        animation-timing-function: ease-in-out;
+        overflow-y: hidden;
+    }
+    .messagesSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 39%;
+        height: 90%;
+        border-right: 1px solid gray;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, .2);
+
+    }
+        .messageSection h3{
+            display: flex;
+            width: 100%;
+            height: 20%
+        }
+        .messageListContainer{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 80%;
+            overflow-y: scroll;
+        }
+            .clickedMessage{
+                background-color: rgb(47, 50, 62);
+                color: white;
+            }
+            .individualMessageContainer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 80px;
+                border-bottom: 1px solid gray;
+                border-radius: 10px;
+            }
+            .msgImageContainer{
+                width: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+                .msgImage{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                }
+                .msgMain{
+                    width: 80%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+                    .msgName{
+                        width: 100%;
+                        height: 40%;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .msgPreview{
+                        height: 60%;
+                        width: 100%;
+                        display: flex;
+                        align-items: flex-start;
+                        margin-top: 10px;
+                    }
+    .conversationsSection{
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        height: 90%;
+        background-color: rgba(0, 0, 0, .4);
+        border-radius: 10px;
+        position: relative;
+    }
+        .messagingForm{
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+        }
+            .messagingForm .sendButton{
+                display: flex;
+                width: 5%;
+                padding: none;
+                justify-content: center;
+                align-items: center;
+                background: none;
+            }
+            .messagingForm i{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:rgb(26, 113, 107);
+                border-radius: 50%;
+                transition-duration: .2s;
+            }
+                .messagingForm i:hover{
+                    background-color:rgb(131, 203, 224);
+                    transition-duration: .2s;
+
+                }
+            .messagingInput{
+                background-color: rgba(0, 0, 0, 0);
+                height: 100%;
+                width: 70%;
+                border-radius: 20px;
+                border: 1px solid rgb(26, 113, 107);
+                font-family: 'Roboto', sans-serif;
+                padding-left: 10px;
+                color: white;
+            }
+            .messagingInput:focus{
+                outline: 1px solid orange;
+            }
+            .messagingInput::placeholder{
+                color: white;
+            }
+
+ .slidemessagesuparrow{
+     position: absolute;
+     bottom: 2px;
+     left: 48%;
+     transition-duration: .5s;
+ }
+    .slidemessagesuparrow:hover{
+        transition-duration: .5s;
+        color: black;
+    }
+
+.closing{
+    animation-name: closing;
+    animation-duration: .8s;
+}
+
+@keyframes slideMessagesUp {
+    from {
+        height: 95%
+    }
+    to {
+        height: 5%;
+    }
+}
+
+ @keyframes slideMessagesDown {
+    from {
+        height: 5%
+    }
+
+    to {
+        height: 95%;
+    }
+}
